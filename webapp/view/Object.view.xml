@@ -68,7 +68,7 @@
 			</Panel>
 			
 			<Panel
-				class="sapUiResponsiveMargin"
+				class="sapUiResponsiveMargin sapUiHideOnPhone"
 				width="auto"
 				headerText="{i18n>mapTitle}">
 				<Image src="{
