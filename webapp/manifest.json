@@ -112,9 +112,9 @@
 					"target": "object"
 				},
 				{
-					"pattern" : "AddProduct",
-					"name" : "add",
-					"target" : "add"
+					"pattern": "AddProduct",
+					"name": "add",
+					"target": "add"
 				}
 			],
 			"targets": {
