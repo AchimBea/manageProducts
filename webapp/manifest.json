@@ -22,7 +22,7 @@
 		},
 		"sourceTemplate": {
 			"id": "sap.ui.ui5-template-plugin.1worklist",
-			"version": "1.36.2"
+			"version": "1.36.1"
 		}
 	},
 	"sap.ui": {
@@ -61,6 +61,9 @@
 				},
 				"sap.m": {
 					"minVersion": "1.36.0"
+				},
+				"sap.ui.layout": {
+					"minVersion": "1.36.0"
 				}
 			}
 		},
@@ -78,6 +81,7 @@
 			"": {
 				"dataSource": "mainService",
 				"settings": {
+					"defaultBindingMode": "TwoWay",
 					"metadataUrlParams": {
 						"sap-documentation": "heading"
 					}
@@ -92,9 +96,7 @@
 				"controlId": "app",
 				"controlAggregation": "pages",
 				"bypassed": {
-					"target": [
-						"notFound"
-					]
+					"target": "notFound"
 				},
 				"async": true
 			},
@@ -102,16 +104,17 @@
 				{
 					"pattern": "",
 					"name": "worklist",
-					"target": [
-						"worklist"
-					]
+					"target": "worklist"
 				},
 				{
 					"pattern": "ProductSet/{objectId}",
 					"name": "object",
-					"target": [
-						"object"
-					]
+					"target": "object"
+				},
+				{
+					"pattern" : "AddProduct",
+					"name" : "add",
+					"target" : "add"
 				}
 			],
 			"targets": {
@@ -124,6 +127,11 @@
 					"viewName": "Object",
 					"viewId": "object",
 					"viewLevel": 2
+				},
+				"add": {
+					"viewName": "Add",
+					"viewId": "add",
+					"viewLevel": 3
 				},
 				"objectNotFound": {
 					"viewName": "ObjectNotFound",
